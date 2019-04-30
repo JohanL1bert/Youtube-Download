@@ -1,10 +1,5 @@
 import pytube, re
 
-
-
-
-
-
 def inpu():
 	global ytlink
 	while True:
@@ -47,5 +42,6 @@ if inp == "VIDEO":
 	videomp()
 elif inp == "AUDIO":
 	audio()
+
 
 
