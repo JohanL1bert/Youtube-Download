@@ -26,4 +26,3 @@ Video with sound found not higher than 720p
 ![4](https://user-images.githubusercontent.com/49831284/99093209-d9140c00-25da-11eb-93af-c6c13160d1bc.png)
 
 5. Download to the same directory where script situated
-
