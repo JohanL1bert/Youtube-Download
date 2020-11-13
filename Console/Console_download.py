@@ -11,7 +11,7 @@ template_video = " type=video"
 template_music = " type=music"
 
 
-download_link = input("Input link to download: ")
+download_link = input("Enter link to download: ")
 yt = YouTube(download_link)
 
 
@@ -29,7 +29,8 @@ def repeat(running):
       """)
         print("\n")
         global choice_filter 
-        choice_filter= input("Input: ")
+        choice_filter= input("Enter: ")
+        print("\n")
         if choice_filter == "M":
             stream = yt.streams.filter(only_audio = True, file_extension='mp4')
             running = False
@@ -79,6 +80,7 @@ def search_string():
         print(f"{count}. {x}")
         count += 1
 
+    print("\n")
     #pattern
     if choice_filter == "M":
         input_resolution = input("Choice abr bitrate like: 128kbps: ")
