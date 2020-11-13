@@ -8,7 +8,7 @@ Video with sound found not higher than 720p
 How to use:
 1. Enter link from youtube video you want
 
-![1](https://user-images.githubusercontent.com/49831284/99090441-53429180-25d7-11eb-87a8-07da79c5caf1.png)
+![7](https://user-images.githubusercontent.com/49831284/99093073-acf88b00-25da-11eb-9b39-3cfd37cb2234.png)
 
 2. Small notification how use this. Enter what do you want: V, VM or M.
 
@@ -16,11 +16,11 @@ How to use:
 
 3. You will see all found options. It can be another as in image
 
-![3](https://user-images.githubusercontent.com/49831284/99090532-6ead9c80-25d7-11eb-8535-b13203ef3a74.png)
+![6](https://user-images.githubusercontent.com/49831284/99093156-c8fc2c80-25da-11eb-93d5-a60bc821198a.png)
 
 4. Type res or abr with download
 
-![4](https://user-images.githubusercontent.com/49831284/99090642-8e44c500-25d7-11eb-9e05-ccb93e2a22c3.png)
+![4](https://user-images.githubusercontent.com/49831284/99093209-d9140c00-25da-11eb-93af-c6c13160d1bc.png)
 
 5. Download to the same directory where script situated
 
