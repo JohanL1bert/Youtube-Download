@@ -51,12 +51,11 @@ def search_string():
     for i in (stream):
         reverse_list += str(i)
 
-    if choice_filter == "V":
-        pattern_search = (r'(res="[+]?\d+p)')
-    elif choice_filter == "M":
+    if choice_filter == "M":
         pattern_search = (r'(abr="[1-9]{3}kbps)"')
-    elif choice_filter == "VM":
+    else:
         pattern_search = (r'(res="[+]?\d+p)')
+
         
     pattern_result = re.findall(pattern_search, reverse_list)
 
@@ -95,5 +94,3 @@ def search_string():
         
 
 search_string()
-
-
