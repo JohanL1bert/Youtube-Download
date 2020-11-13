@@ -5,7 +5,8 @@ Script to donwload video and music from Youtube with library Pytube
 Same type of download replaces previous. Example:
 if you donwload video without sound and then start download video with sound. It will replace older video.
 Doesn't apply to music.
-Only support: mp4 format
+
+Only support: mp4 format.
 Video with sound found not higher than 720p
 
 ## How to use:
