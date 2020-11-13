@@ -6,7 +6,8 @@ Doesn't apply to music.
 Only support: mp4 format
 Video with sound found not higher than 720p
 How to use:
-<p>1. Enter link from youtube video you want</p>
+1. Enter link from youtube video you want
+<br>
 ![1](https://user-images.githubusercontent.com/49831284/99090441-53429180-25d7-11eb-87a8-07da79c5caf1.png)
 
 2. Small notification how use this. Enter what do you want: V, VM or M.
