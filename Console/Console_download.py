@@ -46,7 +46,7 @@ def repeat(running):
     # Don't wanna get choice_filter =/
 
 
-def search_string():
+def main():
     stream = repeat(running)
     reverse_list = ""
     for i in (stream):
@@ -95,4 +95,4 @@ def search_string():
 
         
 
-search_string()
+main()
