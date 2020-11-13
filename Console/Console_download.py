@@ -10,8 +10,15 @@ running = True
 template_video = " type=video"
 template_music = " type=music"
 
+while True:
+    download_link = input("Enter link to download: ")
+    o_parse = urlparse(download_link)
+    if o_parse.scheme == "https" and o_parse.netloc == "www.youtube.com":
+        break
+    else:
+        print("Link is not valid ")
 
-download_link = input("Enter link to download: ")
+
 yt = YouTube(download_link)
 
 
