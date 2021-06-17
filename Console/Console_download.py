@@ -8,6 +8,7 @@ RUNNING = True
 TEMPLATE_VIDEO = " type=video"
 TEMPLATE_MUSIC = " type=music"
 ARRAY_WORDS = ['VM', 'vm', 'V', 'v', 'M', 'm']
+ARRAY_SIZE = ['144', '240', '360', '720', '1080']
 TEMPLATE =(  
    """
       '''''''''''''''''''''''''''''''''''''''
@@ -102,10 +103,20 @@ def creat_list_patt(choice, TEMPLATE_MUSIC, TEMPLATE_VIDEO, splitted_string):
 
 
 def view(view_temp):
+    empty_string = " "
     count = 1
     for i in view_temp:
         print(f"{count}. {i}")
+        empty_string += (f"{count}. {i}")
         count += 1
+    
+    return empty_string
+
+
+def re_find():
+    pattern = (r'[0-9]{3,}')
+    search_value = re.findall(pattern, pass)
+    #TODO while function: need replace pass to empty_string. And check input resouluon with array
 
 
 def download_stream_filter(choice, stream):
@@ -133,7 +144,8 @@ def main():
     get_pattern = choice_pattern(youtube_stream_choice, string_obj_stream)
     split_string = clear_pattern(get_pattern)
     view_temp = creat_list_patt(youtube_stream_choice, TEMPLATE_MUSIC, TEMPLATE_VIDEO, split_string)
-    view(view_temp)
+    get_string_to_re = view(view_temp)
+    print(get_string_to_re)
     get_downloadt_stream = download_stream_filter(youtube_stream_choice, stream_obj)
     download_path(get_downloadt_stream)
 
