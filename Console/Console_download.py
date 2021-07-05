@@ -1,5 +1,7 @@
 import re, os, sys
+from time import sleep
 from pytube import YouTube
+from pytube.cli import on_progress
 from urllib.parse import urlparse
 
 
@@ -130,22 +132,37 @@ def download_stream_filter(choice, stream):
     return filter_to_download
 
 
-def download_path(obj_dow):
-    obj_dow.download('Download_Youtube')
+def download_path(obj_dow, title, exist_title):
+    print(f'name: ${title}')
+    obj_dow.download('Download_Youtube', filename=exist_title)
+    print('\n\n')
 
 
 def wrapper():
     print(f'1. Download \n2. Exit')
     get_output = int(input())
     if get_output == (2):
-        return sys.exit()
+        sys.exit()
+
+
+def check_copy_download(title_name):
+    #TODO: Rewrite 
+    title = title_name + '.mp4'
+    get_all_file = os.path.isfile(f'./Download_Youtube/{title}')
+    if get_all_file == True:
+        title_name += '(1)'
+        print(title_name)
+        return title_name
+    else: 
+        return title
 
 
 def main():
     create_folder()
     wrapper()
     download = valid_link()
-    yt = YouTube(download)
+    yt = YouTube(download, on_progress_callback=on_progress)
+    title = yt.title
     choice_filt = status_choice(RUNNING)
     stream_obj, youtube_stream_choice = choice_filter(yt, choice_filt)
     string_obj_stream = to_string(stream_obj)
@@ -153,10 +170,10 @@ def main():
     split_string = clear_pattern(get_pattern)
     view_temp = creat_list_patt(youtube_stream_choice, TEMPLATE_MUSIC, TEMPLATE_VIDEO, split_string)
     get_string_to_re = view(view_temp)
-    print(get_string_to_re)
+    """ print(get_string_to_re) """
     get_downloadt_stream = download_stream_filter(youtube_stream_choice, stream_obj)
-    download_path(get_downloadt_stream)
-    wrapper()
+    exist_title = check_copy_download(title)
+    download_path(get_downloadt_stream, title, exist_title)
 
 main()
 
