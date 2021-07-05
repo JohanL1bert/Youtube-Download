@@ -1,4 +1,4 @@
-import re, os
+import re, os, sys
 from pytube import YouTube
 from urllib.parse import urlparse
 
@@ -115,7 +115,7 @@ def view(view_temp):
 
 def re_find():
     pattern = (r'[0-9]{3,}')
-    search_value = re.findall(pattern, pass)
+    search_value = re.findall(pattern)
     #TODO while function: need replace pass to empty_string. And check input resouluon with array
 
 
@@ -134,8 +134,16 @@ def download_path(obj_dow):
     obj_dow.download('Download_Youtube')
 
 
+def wrapper():
+    print(f'1. Download \n2. Exit')
+    get_output = int(input())
+    if get_output == (2):
+        return sys.exit()
+
+
 def main():
     create_folder()
+    wrapper()
     download = valid_link()
     yt = YouTube(download)
     choice_filt = status_choice(RUNNING)
@@ -148,6 +156,7 @@ def main():
     print(get_string_to_re)
     get_downloadt_stream = download_stream_filter(youtube_stream_choice, stream_obj)
     download_path(get_downloadt_stream)
-
+    wrapper()
 
 main()
+
